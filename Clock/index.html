@@ -21,7 +21,7 @@
         class="rounded"
       />
       <div class="text1 text-center">
-        Merhaba,  <strong><span id="myName"></span></strong>! Hoş geldin!
+        Merhaba, <strong><span id="myName"></span></strong>! Hoş geldin!
       </div>
       <div id="myClock" class="clock" onload="showTime()"></div>
       <div class="text2 text-center">
@@ -31,7 +31,9 @@
       </div>
     </div>
     <script>
-      document.getElementById('myName').innerHTML= prompt('Lütfen isminizi giriniz: ')
+      document.getElementById("myName").innerHTML = prompt(
+        "Lütfen isminizi giriniz: "
+      );
 
       function showTime() {
         const today = new Date();
@@ -40,17 +42,17 @@
         let s = today.getSeconds();
         m = checkTime(m);
         s = checkTime(s);
-        document.getElementById('myClock').innerHTML =  h + ":" + m + ":" + s;
+        document.getElementById("myClock").innerHTML = h + ":" + m + ":" + s;
         setTimeout(showTime, 1000);
-        
       }
-      
+
       function checkTime(i) {
-        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        if (i < 10) {
+          i = "0" + i;
+        } // add zero in front of numbers < 10
         return i;
       }
-      showTime()
-      
+      showTime();
     </script>
   </body>
 </html>
